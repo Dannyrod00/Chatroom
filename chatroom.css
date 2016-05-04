@@ -6,6 +6,71 @@ body {
     background-size: cover:
 }
 
+#wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100;
+    border-style: solid;
+    border-width: thin;
+    border-color: #d3d3d3;
+    border-top-left-radius: 5px 5px;
+    border-top-right-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+}
+
+#wrapper1 {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#wrappertitle {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #d3d3d3;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+}
+
 h1 {
     text-align: center;
+}
+
+.btn {
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: Arial;
+    color: #007777;
+    font-size: 20px;
+    background: transparent;
+    border: solid #004444 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.btn:hover {
+    border-color: #007777;
+    background-color: transparent;
+    color: #004444;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:click {
+    border-color: #007777;
+    background-color: transparent;
+    color: #004444;
+    text-align: center;
+    text-decoration: none;
 }

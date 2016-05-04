@@ -3,15 +3,15 @@
 </head>
 
 <body>
-    <h1>ndckjzs</h1> {{> hello}}
+
+    <h1 id="wrappertitle">ndckjzs</h1> {{> hello}}
 
 
 
 </body>
 
-<template name="hello">
-    <div>
-        <button class="event-alert">Click</button>
+<template class="padding" name="hello">
+    <div id="wrapper">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
@@ -31,5 +31,14 @@
 
         {{message}}
 
+        <div id="wrapper1">
+            <form class="name-form">
+                <input type="text" name="firstname">
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+
+
     </div>
+
 </template>
