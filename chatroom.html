@@ -1,44 +1,62 @@
-<head>
-    <title>chatroom</title>
-</head>
+<template name="ApplicationLayout">
 
-<body>
+    <head>
+        <title>chatroom</title>
+    </head>
 
-    <h1 id="wrappertitle">ndckjzs</h1> {{> hello}}
+    <body>
+        <div id="wrappertitle">
+            <h1>حديث</h1>
+
+            <ul class="right top hide-on-med-and-down">
+                <li>{{> loginButtons align=right}}</li>
+            </ul>
+        </div>
+        <div id="wrapper2">
+            <ul class="nav nav-tabs" role="tablist">
+
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
+
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home"></div>
+                <div role="tabpanel" class="tab-pane" id="profile"></div>
+                <div role="tabpanel" class="tab-pane" id="messages"></div>
+                <div role="tabpanel" class="tab-pane" id="settings"></div>
+            </div>
+        </div>
+        {{> yield}}
 
 
 
-</body>
+    </body>
+</template>
 
 <template class="padding" name="hello">
     <div id="wrapper">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-        </ul>
+        <div class="sent">
+            {{#each message}}
+            <li>{{username}}:{{name}}</li> {{/each}}
 
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="home">...</div>
-            <div role="tabpanel" class="tab-pane" id="profile">...</div>
-            <div role="tabpanel" class="tab-pane" id="messages">...</div>
-            <div role="tabpanel" class="tab-pane" id="settings">...</div>
         </div>
-
-        {{message}}
 
         <div id="wrapper1">
             <form class="name-form">
                 <input type="text" name="firstname">
-                <button class="btn" type="submit">Send</button>
+                <button class="btn center" type="submit">Send</button>
             </form>
         </div>
 
-
     </div>
 
+</template>
+
+<template class="padding" name="friends">
+    hello
 </template>

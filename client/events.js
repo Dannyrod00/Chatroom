@@ -3,8 +3,9 @@ Template.hello.events({
         event.preventDefault();
         var name = event.target.firstname.value;
 
-        Message.insert({
-            name: name
+        Messages.insert({
+            name: name,
+            username: Meteor.user().username,
 
         });
     }

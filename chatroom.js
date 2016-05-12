@@ -1,4 +1,4 @@
-//$('#home a').click(function (e) {
-//  e.preventDefault()
-//  $(this).tab('show')
-//})
+//Accounts.ui.config({
+//    passwordSignupFields: "USERNAME_ONLY"
+//
+//});
